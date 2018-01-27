@@ -36,9 +36,10 @@ public class ButtonManager : MonoBehaviour
         {
             ++addPower;
             Wabletopress = false;
+            Wbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.W) && Wabletopress == false || Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKeyDown(KeyCode.W) && Sbutton)
         {
             Wabletopress = true;
         }
@@ -47,9 +48,10 @@ public class ButtonManager : MonoBehaviour
         {
             ++addPower;
             Aabletopress = false;
+            Abutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.A) && Aabletopress == false)
+        else if (Input.GetKeyDown(KeyCode.A) && Dbutton)
         {
             Aabletopress = true;
         }
@@ -58,9 +60,10 @@ public class ButtonManager : MonoBehaviour
         {
             ++addPower;
             Sabletopress = false;
+            Sbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.S) && Sabletopress == false)
+        else if (Input.GetKeyDown(KeyCode.S) && Abutton)
         {
             Sabletopress = true;
         }
@@ -69,9 +72,10 @@ public class ButtonManager : MonoBehaviour
         {
             ++addPower;
             Dabletopress = false;
+            Dbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.D) && Dabletopress == false)
+        else if (Input.GetKeyDown(KeyCode.D) && Wbutton)
         {
             Dabletopress = true;
         }
