@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4278057665006930}
   - component: {fileID: 108755632935530650}
   - component: {fileID: 114474586667698696}
+  - component: {fileID: 114213157354672406}
   m_Layer: 0
   m_Name: Point light
   m_TagString: Untagged
@@ -121,8 +122,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1564639835030512}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.091, y: -1.85, z: 1.333}
+  m_LocalRotation: {x: -0.40821788, y: 0.23456968, z: -0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -0.27833384, y: -1.8153121, z: 4.8079977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4502945982623322}
@@ -398,6 +399,24 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114213157354672406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040664852767222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerUsage: 0
+  TurnedOn: 0
+  TurnOnTime: 0
+  Duration: 0
+  OnDuration: 0
+  electricityGauge: {fileID: 0}
+  levelTimeline: {fileID: 0}
 --- !u!114 &114474586667698696
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -56,12 +56,12 @@ public class ElectricityGauge : MonoBehaviour {
     //power limit hit at 100
     void PowerSurge()
     {
-
+        Debug.Log("Yo you lost");
     }
 
     //power limit hit at 0
     void NoPower()
     {
-        
+        Debug.Log("Yo we dont have power");
     }
 }
