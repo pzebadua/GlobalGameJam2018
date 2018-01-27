@@ -20,37 +20,41 @@ public class Electronics : MonoBehaviour {
     float OnDuration;
     [SerializeField]
     ElectricityGauge electricityGauge;
-    [SerializeField]
-    Material OnMaterial;
-    [SerializeField]
-    Material OffMaterial;
+    //[SerializeField]
+    //Material OnMaterial;
+    //[SerializeField]
+    //Material OffMaterial;
     [SerializeField]
     LevelTimeline levelTimeline;
     bool HasBeenUsed = false;
+    LightingManager myLight;
 
     void Update()
     {
         if ((levelTimeline.CurrentSeconds >= TurnOnTime) && !HasBeenUsed)
         {
             TurnedOn = true;
+            myLight.InvertLight();
         }
         if (TurnedOn && (OnDuration <= Duration))
         {
-            GetComponent<MeshRenderer>().material = OnMaterial;
+            //GetComponent<MeshRenderer>().material = OnMaterial;
             electricityGauge.Charge -= PowerUsage*Time.deltaTime;
             OnDuration += 1 * Time.deltaTime;
             HasBeenUsed = true;
         }
         if (OnDuration >= Duration)
         {
-            GetComponent<MeshRenderer>().material = OffMaterial;
+            //GetComponent<MeshRenderer>().material = OffMaterial;
             TurnedOn = false;
+            myLight.InvertLight();
             OnDuration = 0;
 
         }
     }
     private void Start()
     {
+        myLight = GetComponent<LightingManager>();
         TurnedOn = false;
     }
 
