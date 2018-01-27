@@ -19,6 +19,7 @@ public class ButtonManager : MonoBehaviour
     bool Kbutton;
     bool Lbutton;
     public int addPower = 0;
+    public int addPowerAddition = 0;
     Random rand;
     // Use this for initialization
     void Start()
@@ -43,7 +44,7 @@ public class ButtonManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A) && Aabletopress == true)
         {
-            ++addPower;
+            addPower += addPowerAddition;
             Aabletopress = false;
             Abutton = true;
             StartCoroutine(WaitforPress());
@@ -55,7 +56,7 @@ public class ButtonManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S) && Sabletopress == true)
         {
-            ++addPower;
+            addPower += addPowerAddition;
             Sabletopress = false;
             Sbutton = true;
             StartCoroutine(WaitforPress());
@@ -67,7 +68,7 @@ public class ButtonManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D) && Dabletopress == true)
         {
-            ++addPower;
+            addPower += addPowerAddition;
             Dabletopress = false;
             Dbutton = true;
             StartCoroutine(WaitforPress());
@@ -78,7 +79,7 @@ public class ButtonManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.J) && Jabletopress == true)
         {
-            ++addPower;
+            addPower += addPowerAddition;
             Jabletopress = false;
             Jbutton = true;
             StartCoroutine(WaitforPress());
@@ -90,7 +91,7 @@ public class ButtonManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K) && Kabletopress == true)
         {
-            ++addPower;
+            addPower += addPowerAddition;
             Kabletopress = false;
             Kbutton = true;
             StartCoroutine(WaitforPress());
@@ -102,7 +103,7 @@ public class ButtonManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L) && Labletopress == true)
         {
-            ++addPower;
+            addPower += addPowerAddition;
             Labletopress = false;
             Lbutton = true;
             StartCoroutine(WaitforPress());
