@@ -37,7 +37,6 @@ public class ElectricityGauge : MonoBehaviour {
         {
             PowerSurge();
         }
-
         DegenCharge();
     }
 
@@ -45,6 +44,7 @@ public class ElectricityGauge : MonoBehaviour {
     void ComputeCharge()
     {
         Charge += ButtonScript.addPower;
+        ButtonScript.addPower = 0;
         GetComponent<Slider>().value = Charge;
     }
 
