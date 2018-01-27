@@ -5,23 +5,30 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    bool Wabletopress;
     bool Aabletopress;
     bool Sabletopress;
     bool Dabletopress;
-    bool Wbutton;
+    bool Jabletopress;
+    bool Kabletopress;
+    bool Labletopress;
+
     bool Sbutton;
     bool Abutton;
     bool Dbutton;
+    bool Jbutton;
+    bool Kbutton;
+    bool Lbutton;
     public int addPower = 0;
     Random rand;
     // Use this for initialization
     void Start()
     {
-        Wabletopress = true;
         Aabletopress = true;
         Sabletopress = true;
         Dabletopress = true;
+        Jabletopress = true;
+        Kabletopress = true;
+        Labletopress = true;
         rand = new Random();
     }
 
@@ -32,17 +39,7 @@ public class ButtonManager : MonoBehaviour
     }
     void ButtonPress()
     {
-        if (Input.GetKeyDown(KeyCode.W) && Wabletopress == true)
-        {
-            ++addPower;
-            Wabletopress = false;
-            Wbutton = true;
-            StartCoroutine(WaitforPress());
-        }
-        else if (Input.GetKeyDown(KeyCode.W) && Sbutton)
-        {
-            Wabletopress = true;
-        }
+     
 
         if (Input.GetKeyDown(KeyCode.A) && Aabletopress == true)
         {
@@ -75,10 +72,47 @@ public class ButtonManager : MonoBehaviour
             Dbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.D) && Wbutton)
+        else if (Input.GetKeyDown(KeyCode.D) && Jbutton)
         {
             Dabletopress = true;
         }
+        if (Input.GetKeyDown(KeyCode.J) && Jabletopress == true)
+        {
+            ++addPower;
+            Jabletopress = false;
+            Jbutton = true;
+            StartCoroutine(WaitforPress());
+        }
+        else if (Input.GetKeyDown(KeyCode.J) && Sbutton)
+        {
+            Jabletopress = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K) && Kabletopress == true)
+        {
+            ++addPower;
+            Kabletopress = false;
+            Kbutton = true;
+            StartCoroutine(WaitforPress());
+        }
+        else if (Input.GetKeyDown(KeyCode.K) && Kbutton)
+        {
+            Aabletopress = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.L) && Labletopress == true)
+        {
+            ++addPower;
+            Labletopress = false;
+            Lbutton = true;
+            StartCoroutine(WaitforPress());
+        }
+        else if (Input.GetKeyDown(KeyCode.L) && Abutton)
+        {
+            Sabletopress = true;
+        }
+
+       
     }
 
     public int GetPower()
