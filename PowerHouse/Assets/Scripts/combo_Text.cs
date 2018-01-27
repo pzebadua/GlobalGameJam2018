@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class showing_Button_Press_Time : MonoBehaviour {
+public class combo_Text : MonoBehaviour {
     [SerializeField]
     Text text;
-    ButtonManager BM;
+    ComboManager CM;
 	// Use this for initialization
 	void Start () {
         text = GetComponent<Text>();
         text = FindObjectOfType<Text>();
-        BM = GetComponent<ButtonManager>();
+        CM = GetComponent<ComboManager>();
 
+	}	
+	// Update is called once per frame
+	void Update ()
+    {
+        ShowCombo();
 	}
-     void Update()
+    void ShowCombo()
     {
-        Shownumbers();
-    }
-    // Update is called once per frame
-    void Shownumbers()
-    {
-        text.text = BM.addPower.ToString();
+        text.text = CM.combo1completion.ToString();
     }
 }
