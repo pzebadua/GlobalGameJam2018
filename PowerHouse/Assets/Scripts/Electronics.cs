@@ -6,10 +6,46 @@ public class Electronics : MonoBehaviour {
 
     [SerializeField]
     //How much power the device needs
-    public float PowerUsage;
+    float PowerUsage;
     [SerializeField]
-    //Current power that the device has
-    float CurrentPower;
+    bool TurnedOn;
+    [SerializeField]
+    //Time the object should turn on in seconds
+    int TurnOnTime; 
+    [SerializeField]
+    //duration the object should be turned on
+    float Duration;
+    //duration the object has been turned on
+    float OnDuration;
+    [SerializeField]
+    ElectricityGauge electricityGauge;
+    [SerializeField]
+    Material material;
+    [SerializeField]
+    LevelTimeline levelTimeline;
+
+    void Update()
+    {
+        if (levelTimeline.CurrentSeconds == TurnOnTime)
+        {
+            TurnedOn = true;
+        }
+        if (TurnedOn && Duration <= OnDuration)
+        {
+            GetComponent<MeshRenderer>().material = material;
+            electricityGauge.Charge -= PowerUsage*Time.deltaTime;
+            Duration += 1 * Time.deltaTime;
+        }
+        if (OnDuration >= Duration)
+        {
+            TurnedOn = false;
+            OnDuration = 0;
+        }
+    }
+    private void Start()
+    {
+        TurnedOn = false;
+    }
 
     float GetPowerUsage()
     {
@@ -21,13 +57,14 @@ public class Electronics : MonoBehaviour {
         PowerUsage = _PowerUsage;
     }
 
-    float GetCurrentPower()
+    void LackOfPower()
     {
-        return CurrentPower;
+        //has less power than needed and about to shut off
+        //animation to get more dim.
     }
 
-    void SetCurrentPower(float _CurrentPower)
+    void TriggerTimeline()
     {
-        CurrentPower = _CurrentPower;
+
     }
 }

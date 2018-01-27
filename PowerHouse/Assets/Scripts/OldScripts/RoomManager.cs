@@ -5,8 +5,13 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour {
 
     [SerializeField]
-    Electronics[] ElectricItems;
+    public Electronics[] ElectricItems;
     [SerializeField]
     string RoomName;
+
+    void Start()
+    {
+        RoomName = gameObject.name;
+    }
 
 }
