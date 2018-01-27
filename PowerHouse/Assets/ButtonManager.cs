@@ -38,7 +38,7 @@ public class ButtonManager : MonoBehaviour
             Wabletopress = false;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.W) && Wabletopress == false)
+        else if (Input.GetKeyDown(KeyCode.W) && Wabletopress == false || Input.GetKeyDown(KeyCode.W) && )
         {
             Wabletopress = true;
         }
