@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class ElectricityGauge : MonoBehaviour {
 
     [SerializeField]
     float DegenRate;
@@ -19,6 +19,7 @@ public class NewBehaviourScript : MonoBehaviour {
     {
         //start the game at the "sweet spot" (75-80 charge)
         Charge = 75;
+        Capacity = 100;
         GetComponent<Slider>().value = Charge;
 	}
 	
@@ -36,12 +37,20 @@ public class NewBehaviourScript : MonoBehaviour {
         {
             PowerSurge();
         }
-	}
+
+        DegenCharge();
+    }
 
     //computes the charge to be added based on incoming input
     void ComputeCharge()
     {
-        //Charge = accessor from ButtonManager
+        Charge += ButtonScript.addPower;
+        GetComponent<Slider>().value = Charge;
+    }
+
+    void DegenCharge()
+    {
+        Charge -= DegenRate;
         GetComponent<Slider>().value = Charge;
     }
 

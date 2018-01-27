@@ -38,7 +38,7 @@ public class ButtonManager : MonoBehaviour
             Wabletopress = false;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.W) && Wabletopress == false || Input.GetKeyDown(KeyCode.W) && )
+        else if (Input.GetKeyDown(KeyCode.W) && Wabletopress == false || Input.GetKeyDown(KeyCode.W))
         {
             Wabletopress = true;
         }
@@ -85,7 +85,6 @@ public class ButtonManager : MonoBehaviour
     IEnumerator WaitforPress()
     {
         yield return new WaitForSeconds(0.65f);
-
     }
 
 
