@@ -27,12 +27,11 @@ public class PowerUpManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (powerupused == false)
-        {
+       
             StopDegen();
             DoubleCapacity();
             AnyKeyPress();
-        }
+        
     }
     void StopDegen()
     {
@@ -50,9 +49,9 @@ public class PowerUpManager : MonoBehaviour
         //Access the Capacity, store the capacity in a temp
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            powerupused = true;
+            EG.Capacity = 200.0f;
             StartCoroutine(PowerUpCooldown());
-            powerupused = false;
+            EG.Capacity = 100.0f;
 
         }
 
