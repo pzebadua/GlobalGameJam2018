@@ -170,12 +170,17 @@ Prefab:
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
       propertyPath: Duration
-      value: 4
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
       propertyPath: PowerUsage
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
+        type: 2}
+      propertyPath: TurnedOn
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f31d77ffc50818c4981700212246d7e9, type: 2}
@@ -1163,7 +1168,7 @@ Prefab:
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
       propertyPath: PowerUsage
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
@@ -1541,7 +1546,7 @@ Prefab:
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
       propertyPath: Duration
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f31d77ffc50818c4981700212246d7e9, type: 2}
@@ -1803,7 +1808,7 @@ Prefab:
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
       propertyPath: PowerUsage
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
@@ -1813,7 +1818,7 @@ Prefab:
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
       propertyPath: Duration
-      value: 19
+      value: 37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a361770a0f8af5e4f8e8fa8feb83d155, type: 2}
@@ -1972,6 +1977,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &961632431 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114622877073798562, guid: b6109825701f9c348a6a790c2990f486,
+    type: 2}
+  m_PrefabInternal: {fileID: 430369851}
+  m_Script: {fileID: 11500000, guid: e4230c80daa3df646bf03ad49cc75da3, type: 3}
 --- !u!1 &1013607137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2753,11 @@ Prefab:
       propertyPath: ButtonScript
       value: 
       objectReference: {fileID: 2111979038}
+    - target: {fileID: 114951577504419798, guid: d056b2ce32d4d5740963badeaa2e4f7e,
+        type: 2}
+      propertyPath: RegenRate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d056b2ce32d4d5740963badeaa2e4f7e, type: 2}
   m_IsPrefabParent: 0
@@ -2814,7 +2830,7 @@ Prefab:
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
       propertyPath: PowerUsage
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
@@ -2824,7 +2840,7 @@ Prefab:
     - target: {fileID: 114687853769200698, guid: f31d77ffc50818c4981700212246d7e9,
         type: 2}
       propertyPath: Duration
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f31d77ffc50818c4981700212246d7e9, type: 2}
@@ -3220,7 +3236,7 @@ Prefab:
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
       propertyPath: PowerUsage
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
@@ -3230,7 +3246,7 @@ Prefab:
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
       propertyPath: Duration
-      value: 15
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a361770a0f8af5e4f8e8fa8feb83d155, type: 2}
@@ -3434,7 +3450,7 @@ Prefab:
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
       propertyPath: PowerUsage
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114213157354672406, guid: a361770a0f8af5e4f8e8fa8feb83d155,
         type: 2}
@@ -4235,7 +4251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaf2022e2cb54146b89618a83478b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManagerScript: {fileID: 0}
+  GameManagerScript: {fileID: 961632431}
   electronics:
   - {fileID: 1642231110}
   - {fileID: 777103993}
