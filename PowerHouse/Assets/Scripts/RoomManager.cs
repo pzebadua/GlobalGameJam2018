@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField]
+    Electronics[] ElectricItems;
+    [SerializeField]
+    string RoomName;
+
 }

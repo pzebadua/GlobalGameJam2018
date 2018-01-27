@@ -9,9 +9,8 @@ public class ElectricityGauge : MonoBehaviour {
     float DegenRate;
     [SerializeField]
     float Capacity;
-    [SerializeField]
     //current charge value
-    float Charge;
+    public float Charge;
     [SerializeField]
     ButtonManager ButtonScript;
 
