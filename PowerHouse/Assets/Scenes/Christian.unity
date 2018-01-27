@@ -143,13 +143,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 0.05
+  PowerUsage: 8
   TurnedOn: 0
-  TurnOnTime: 0
-  Duration: 0
+  TurnOnTime: 7
+  Duration: 10
+  OnDuration: 0
   electricityGauge: {fileID: 2035940652}
-  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
-  levelTimeline: {fileID: 0}
+  OnMaterial: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  OffMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  levelTimeline: {fileID: 826614608}
 --- !u!23 &256414910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -414,13 +416,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 0.1
+  PowerUsage: 8
   TurnedOn: 0
-  TurnOnTime: 0
-  Duration: 0
+  TurnOnTime: 3
+  Duration: 5
+  OnDuration: 0
   electricityGauge: {fileID: 2035940652}
-  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
-  levelTimeline: {fileID: 0}
+  OnMaterial: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  OffMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  levelTimeline: {fileID: 826614608}
 --- !u!23 &371445346
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -847,13 +851,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 0.15
+  PowerUsage: 8
   TurnedOn: 0
-  TurnOnTime: 0
-  Duration: 0
+  TurnOnTime: 12
+  Duration: 10
+  OnDuration: 0
   electricityGauge: {fileID: 2035940652}
-  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
-  levelTimeline: {fileID: 0}
+  OnMaterial: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  OffMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  levelTimeline: {fileID: 826614608}
 --- !u!23 &763660485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -950,13 +956,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 0.075
+  PowerUsage: 8
   TurnedOn: 0
-  TurnOnTime: 0
-  Duration: 0
+  TurnOnTime: 15
+  Duration: 15
+  OnDuration: 0
   electricityGauge: {fileID: 2035940652}
-  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
-  levelTimeline: {fileID: 0}
+  OnMaterial: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  OffMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  levelTimeline: {fileID: 826614608}
 --- !u!23 &797457252
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1801,7 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7843ac0bd6d3345b5eac69094c4ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RegenRate: 5
+  RegenRate: 6
   Capacity: 100
   Charge: 0
   ButtonScript: {fileID: 1136150081}
