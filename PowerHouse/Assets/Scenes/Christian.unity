@@ -143,15 +143,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 35
-  CurrentPower: 0
+  PowerUsage: 0.05
+  TurnedOn: 0
+  TurnOnTime: 0
+  Duration: 0
+  electricityGauge: {fileID: 2035940652}
+  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  levelTimeline: {fileID: 0}
 --- !u!23 &256414910
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256414908}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -288,12 +293,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 257375916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 139.3}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.092, y: -1.0359998, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 0.4}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 870827709}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &322438428
 GameObject:
@@ -372,12 +377,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 322438428}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 139.3}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.092, y: -1.0359998, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 0.40000024}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 870827709}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &371445344
 GameObject:
@@ -409,15 +414,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 20
-  CurrentPower: 0
+  PowerUsage: 0.1
+  TurnedOn: 0
+  TurnOnTime: 0
+  Duration: 0
+  electricityGauge: {fileID: 2035940652}
+  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  levelTimeline: {fileID: 0}
 --- !u!23 &371445346
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 371445344}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -579,7 +589,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 481956074}
-  - component: {fileID: 481956073}
   m_Layer: 0
   m_Name: Room 4
   m_TagString: Untagged
@@ -587,20 +596,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &481956073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 481956072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65363e9e6b49d34fba7c25506157c72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ElectricItems:
-  - {fileID: 797457251}
-  RoomName: Room 4
 --- !u!4 &481956074
 Transform:
   m_ObjectHideFlags: 0
@@ -613,7 +608,7 @@ Transform:
   m_Children:
   - {fileID: 797457255}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &487448314
 GameObject:
@@ -704,7 +699,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 488747555}
-  - component: {fileID: 488747554}
   m_Layer: 0
   m_Name: Room 3
   m_TagString: Untagged
@@ -712,20 +706,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &488747554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 488747553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65363e9e6b49d34fba7c25506157c72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ElectricItems:
-  - {fileID: 763660484}
-  RoomName: Room 3
 --- !u!4 &488747555
 Transform:
   m_ObjectHideFlags: 0
@@ -738,7 +718,7 @@ Transform:
   m_Children:
   - {fileID: 763660488}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510633653
 GameObject:
@@ -816,7 +796,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 535334864}
-  - component: {fileID: 535334863}
   m_Layer: 0
   m_Name: Room 1
   m_TagString: Untagged
@@ -824,20 +803,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &535334863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 535334862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65363e9e6b49d34fba7c25506157c72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ElectricItems:
-  - {fileID: 763660484}
-  RoomName: Room 1
 --- !u!4 &535334864
 Transform:
   m_ObjectHideFlags: 0
@@ -850,7 +815,7 @@ Transform:
   m_Children:
   - {fileID: 371445349}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763660483
 GameObject:
@@ -882,15 +847,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 60
-  CurrentPower: 0
+  PowerUsage: 0.15
+  TurnedOn: 0
+  TurnOnTime: 0
+  Duration: 0
+  electricityGauge: {fileID: 2035940652}
+  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  levelTimeline: {fileID: 0}
 --- !u!23 &763660485
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 763660483}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -980,15 +950,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd16132de8dd54ab4bfed87c8f7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUsage: 15
-  CurrentPower: 0
+  PowerUsage: 0.075
+  TurnedOn: 0
+  TurnOnTime: 0
+  Duration: 0
+  electricityGauge: {fileID: 2035940652}
+  material: {fileID: 2100000, guid: 79a7ccab73e6c6f4293f58ea9acf7499, type: 2}
+  levelTimeline: {fileID: 0}
 --- !u!23 &797457252
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 797457250}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1047,6 +1022,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 481956074}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &826614607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 826614609}
+  - component: {fileID: 826614608}
+  m_Layer: 0
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &826614608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826614607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaf2022e2cb54146b89618a83478b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManagerScript: {fileID: 1215659595}
+  electronics:
+  - {fileID: 371445345}
+  - {fileID: 256414909}
+  - {fileID: 763660484}
+  - {fileID: 797457251}
+  Level: 0
+  CurrentSeconds: 0
+  LevelLength: 0
+  CountdownTime: 0
+--- !u!4 &826614609
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826614607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.273, y: 1.259, z: 139.3}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &870827708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 870827709}
+  m_Layer: 0
+  m_Name: House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &870827709
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870827708}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.273, y: 1.259, z: 139.3}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_Children:
+  - {fileID: 257375920}
+  - {fileID: 322438432}
+  - {fileID: 1478399963}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894985242
 GameObject:
@@ -1150,55 +1206,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958122328}
---- !u!1 &1085139434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1085139436}
-  - component: {fileID: 1085139435}
-  m_Layer: 0
-  m_Name: BuildingManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1085139435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1085139434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f649ffe83ca718148862e1e5c4e8c522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rooms:
-  - {fileID: 535334863}
-  - {fileID: 1643503820}
-  - {fileID: 488747554}
-  - {fileID: 481956073}
-  BuildingRooms: 4
-  CurrentPower: 0
-  PoweredObject: {fileID: 0}
-  electricityGauge: {fileID: 2035940652}
---- !u!4 &1085139436
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1085139434}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 139.3}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1136150080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1478399959
 GameObject:
@@ -1364,11 +1371,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478399959}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 1, z: 139.3}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalPosition: {x: 1.092, y: -1.0359998, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 0.4}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 870827709}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!1 &1635251913
 GameObject:
@@ -1446,7 +1453,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1643503821}
-  - component: {fileID: 1643503820}
   m_Layer: 0
   m_Name: Room 2
   m_TagString: Untagged
@@ -1454,20 +1460,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1643503820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1643503819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65363e9e6b49d34fba7c25506157c72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ElectricItems:
-  - {fileID: 256414909}
-  RoomName: Room 2
 --- !u!4 &1643503821
 Transform:
   m_ObjectHideFlags: 0
@@ -1480,7 +1472,7 @@ Transform:
   m_Children:
   - {fileID: 256414913}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1644358624
 GameObject:
@@ -1809,7 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7843ac0bd6d3345b5eac69094c4ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DegenRate: 0.075
+  RegenRate: 5
   Capacity: 100
   Charge: 0
   ButtonScript: {fileID: 1136150081}

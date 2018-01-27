@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class ElectricityGauge : MonoBehaviour {
 
     [SerializeField]
-    float DegenRate;
+    float RegenRate;
     [SerializeField]
-    float Capacity;
+    public float Capacity;
     //current charge value
     public float Charge;
     [SerializeField]
@@ -17,7 +17,7 @@ public class ElectricityGauge : MonoBehaviour {
     void Start ()
     {
         //start the game at the "sweet spot" (75-80 charge)
-        Charge = 75;
+        Charge = 50;
         Capacity = 100;
         GetComponent<Slider>().value = Charge;
 	}
@@ -49,7 +49,7 @@ public class ElectricityGauge : MonoBehaviour {
 
     void DegenCharge()
     {
-        Charge -= DegenRate;
+        Charge += RegenRate*Time.deltaTime;
         GetComponent<Slider>().value = Charge;
     }
 

@@ -10,12 +10,6 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
         Scene scene = SceneManager.GetActiveScene();
 
         //Level One = Easy/Tutorial
@@ -33,5 +27,5 @@ public class GameManager : MonoBehaviour
         {
             Difficulty = "Hard";
         }
-    }
+	}
 }
