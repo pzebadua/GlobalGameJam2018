@@ -35,12 +35,14 @@ public class LevelTimeline : MonoBehaviour
         {
             Level = 2;
             //TODO Add level length
+            LevelLength = 150;
         }
 
         else if (GameManagerScript.Difficulty == "Hard")
         {
             Level = 3;
             //TODO Add level length
+            LevelLength = 120;
         }
     }
 	

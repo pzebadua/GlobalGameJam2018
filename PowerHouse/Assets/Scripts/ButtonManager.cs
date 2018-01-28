@@ -20,7 +20,7 @@ public class ButtonManager : MonoBehaviour
     bool Lbutton;
     public int addPower = 0;
     public int addPowerAddition = 0;
-    Random rand;
+    public pauseMenu PM;
     // Use this for initialization
     void Start()
     {
@@ -30,7 +30,6 @@ public class ButtonManager : MonoBehaviour
         Jabletopress = true;
         Kabletopress = true;
         Labletopress = true;
-        rand = new Random();
     }
 
     // Update is called once per frame
@@ -42,73 +41,73 @@ public class ButtonManager : MonoBehaviour
     {
      
 
-        if (Input.GetKeyDown(KeyCode.A) && Aabletopress == true)
+        if (Input.GetKeyDown(KeyCode.A) && Aabletopress == true && PM.GetGameIsPaused() == false)
         {
             addPower += addPowerAddition;
             Aabletopress = false;
             Abutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.A) && Dbutton)
+        else if (Input.GetKeyDown(KeyCode.A) && Dbutton && PM.GetGameIsPaused() == false)
         {
             Aabletopress = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && Sabletopress == true)
+        if (Input.GetKeyDown(KeyCode.S) && Sabletopress == true && PM.GetGameIsPaused() == false)
         {
             addPower += addPowerAddition;
             Sabletopress = false;
             Sbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.S) && Abutton)
+        else if (Input.GetKeyDown(KeyCode.S) && Abutton && PM.GetGameIsPaused() == false)
         {
             Sabletopress = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && Dabletopress == true)
+        if (Input.GetKeyDown(KeyCode.D) && Dabletopress == true && PM.GetGameIsPaused() == false)
         {
             addPower += addPowerAddition;
             Dabletopress = false;
             Dbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.D) && Jbutton)
+        else if (Input.GetKeyDown(KeyCode.D) && Jbutton && PM.GetGameIsPaused() == false)
         {
             Dabletopress = true;
         }
-        if (Input.GetKeyDown(KeyCode.J) && Jabletopress == true)
+        if (Input.GetKeyDown(KeyCode.J) && Jabletopress == true && PM.GetGameIsPaused() == false)
         {
             addPower += addPowerAddition;
             Jabletopress = false;
             Jbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.J) && Sbutton)
+        else if (Input.GetKeyDown(KeyCode.J) && Sbutton && PM.GetGameIsPaused() == false)
         {
             Jabletopress = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.K) && Kabletopress == true)
+        if (Input.GetKeyDown(KeyCode.K) && Kabletopress == true && PM.GetGameIsPaused() == false)
         {
             addPower += addPowerAddition;
             Kabletopress = false;
             Kbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.K) && Kbutton)
+        else if (Input.GetKeyDown(KeyCode.K) && Kbutton && PM.GetGameIsPaused() == false)
         {
             Aabletopress = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.L) && Labletopress == true)
+        if (Input.GetKeyDown(KeyCode.L) && Labletopress == true && PM.GetGameIsPaused() == false)
         {
             addPower += addPowerAddition;
             Labletopress = false;
             Lbutton = true;
             StartCoroutine(WaitforPress());
         }
-        else if (Input.GetKeyDown(KeyCode.L) && Abutton)
+        else if (Input.GetKeyDown(KeyCode.L) && Abutton && PM.GetGameIsPaused() == false)
         {
             Sabletopress = true;
         }
