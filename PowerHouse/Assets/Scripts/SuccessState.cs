@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SuccessState : MonoBehaviour {
     public bool Winstate;
@@ -8,9 +9,12 @@ public class SuccessState : MonoBehaviour {
     public ScoreBoard SB;
     [SerializeField]
     int LevelTime;
+    [SerializeField]
+    int winscore;
 	// Use this for initialization
 	void Start () {
         Winstate = false;
+        winscore = 0;
         LT.LevelLength = LevelTime;
     }
 	
@@ -20,10 +24,13 @@ public class SuccessState : MonoBehaviour {
 	}
     void BeattheLevel()
     {
-        if (/*SB.GetPlayerScore() >= 45000 &&*/ LevelTime <= LT.CurrentSeconds)
+        if (SB.GetPlayerScore() >= winscore && LevelTime <= LT.CurrentSeconds)
         {
+            SceneManager.LoadScene("MainMenu");
             Winstate = true;
         }
+         
+        
     }
 
 }

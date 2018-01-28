@@ -40,5 +40,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("You lost!");
             failStateScript.GameOver();
         }
+       
+       
     }
 }
