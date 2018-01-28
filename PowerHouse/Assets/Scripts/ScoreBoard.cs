@@ -11,6 +11,7 @@ public class ScoreBoard : MonoBehaviour
    
 
     public ElectricityGauge EG;
+    public pauseMenu PM;
    
     // Use this for initialization
     void Start()
@@ -51,6 +52,8 @@ public class ScoreBoard : MonoBehaviour
             {
                 playerscore *= 10;
             }
+            WinState();
+           
         }
         else
         {
@@ -73,6 +76,7 @@ public class ScoreBoard : MonoBehaviour
         {
             playerscore++;
         }
+        WinState();
     }
     void BadSpot()
     {
@@ -84,7 +88,17 @@ public class ScoreBoard : MonoBehaviour
         {
             Mathf.Clamp(playerscore, 0, int.MaxValue);
         }
+        WinState();
     }
+    void WinState()
+    {
+        if (PM.GetGameIsPaused())
+        {
+            playerscore *= 1;
+        }
+    }
+    
+
     public int GetPlayerScore()
     {
         return playerscore;
