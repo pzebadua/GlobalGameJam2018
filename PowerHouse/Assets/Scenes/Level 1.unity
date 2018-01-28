@@ -113,6 +113,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &43270689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 43270691}
+  - component: {fileID: 43270690}
+  m_Layer: 0
+  m_Name: SuccessState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &43270690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43270689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be04a9e9d44296b498e6226cb249f97e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Winstate: 0
+  LT: {fileID: 1962896826}
+  SB: {fileID: 1755295321}
+  LevelTime: 5
+--- !u!4 &43270691
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43270689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.76, y: -0.41800022, z: 1.3330002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &246258533
 Prefab:
   m_ObjectHideFlags: 0
@@ -1017,6 +1061,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 386292e207de8bd4195a86bb462ad98d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1755295321 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114166763794364948, guid: f9c9cffb4ff449242997d54c1c450f8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1470475801}
+  m_Script: {fileID: 11500000, guid: dbc34efb74647cf4996f54296ea92b7c, type: 3}
+--- !u!114 &1962896826 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114413657498790446, guid: d136a5a728910834a8ea1e4116718a41,
+    type: 2}
+  m_PrefabInternal: {fileID: 281129853}
+  m_Script: {fileID: 11500000, guid: 7aaf2022e2cb54146b89618a83478b60, type: 3}
 --- !u!1001 &2046103304
 Prefab:
   m_ObjectHideFlags: 0
