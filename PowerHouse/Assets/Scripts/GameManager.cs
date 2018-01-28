@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public string Difficulty = "";
+    [SerializeField]
+    ElectricityGauge electricityGauge;
+    [SerializeField]
+    FailState failStateScript;
 
 	// Use this for initialization
 	void Start ()
@@ -28,4 +32,13 @@ public class GameManager : MonoBehaviour
             Difficulty = "Hard";
         }
 	}
+
+    void Update()
+    {
+       if (electricityGauge.Charge <= 0 || electricityGauge.Charge >= 100)
+        {
+            Debug.Log("You lost!");
+            failStateScript.GameOver();
+        }
+    }
 }
