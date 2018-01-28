@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &61742368
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.08978157
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.25769857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.024056891
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.96174425
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708129916308648, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d46dd676d7016ee4c86810d479392e0c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &246258533
 Prefab:
   m_ObjectHideFlags: 0
@@ -670,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &954022062
 Light:
   m_ObjectHideFlags: 0
@@ -681,7 +723,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -758,11 +800,37 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2a2bf0bd61c54e147b2e8bbd9e442d22, type: 3}
     volume: 4.45
     pitch: 0.69
+    loop: 0
     source: {fileID: 0}
   - name: LightOff
     clip: {fileID: 8300000, guid: 81bd39158ba013a449c135dea01e1074, type: 3}
     volume: 4.21
     pitch: 0.67
+    loop: 0
+    source: {fileID: 0}
+  - name: Dishes
+    clip: {fileID: 8300000, guid: 75d47badf990a4544b23311115f89cf3, type: 3}
+    volume: 4.21
+    pitch: 0.88
+    loop: 0
+    source: {fileID: 0}
+  - name: Washer
+    clip: {fileID: 8300000, guid: 70e134ae6f0584843a650e97e632d491, type: 3}
+    volume: 4.21
+    pitch: 0.83
+    loop: 0
+    source: {fileID: 0}
+  - name: AMB
+    clip: {fileID: 8300000, guid: 3e989d3119eb2ba4eb809f1c06931e97, type: 3}
+    volume: 0.23
+    pitch: 1.04
+    loop: 1
+    source: {fileID: 0}
+  - name: LightOff
+    clip: {fileID: 8300000, guid: 81bd39158ba013a449c135dea01e1074, type: 3}
+    volume: 4.21
+    pitch: 0.67
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1252813735
 Transform:
