@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -217,6 +217,144 @@ Prefab:
     - target: {fileID: 1419797003943884, guid: bf05546d0c9558641932d095c9074071, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764065930519902, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764065930519902, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764065930519902, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 224359498534632218, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224359498534632218, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 211
+      objectReference: {fileID: 0}
+    - target: {fileID: 224964033097523926, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.3624594
+      objectReference: {fileID: 0}
+    - target: {fileID: 224964033097523926, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.0424391
+      objectReference: {fileID: 0}
+    - target: {fileID: 224964033097523926, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.71000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 224964033097523926, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 224497532449043422, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224497532449043422, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224836860043430222, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -113
+      objectReference: {fileID: 0}
+    - target: {fileID: 224650901578933986, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -112.979996
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763287750204904, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b572375f9ea1f1948bc553e0216b22d3,
+        type: 3}
+    - target: {fileID: 114820971176167600, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b572375f9ea1f1948bc553e0216b22d3,
+        type: 3}
+    - target: {fileID: 114255398658792458, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b572375f9ea1f1948bc553e0216b22d3,
+        type: 3}
+    - target: {fileID: 224302696236585672, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 742.50073
+      objectReference: {fileID: 0}
+    - target: {fileID: 224302696236585672, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -350
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101525550699878, guid: bf05546d0c9558641932d095c9074071, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114455525992245468, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b572375f9ea1f1948bc553e0216b22d3,
+        type: 3}
+    - target: {fileID: 224532800556990632, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -198
+      objectReference: {fileID: 0}
+    - target: {fileID: 224836860043430222, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 21.585
+      objectReference: {fileID: 0}
+    - target: {fileID: 224836860043430222, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -245
+      objectReference: {fileID: 0}
+    - target: {fileID: 224836860043430222, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 183
+      objectReference: {fileID: 0}
+    - target: {fileID: 224650901578933986, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 21.579
+      objectReference: {fileID: 0}
+    - target: {fileID: 224650901578933986, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 265.92627
+      objectReference: {fileID: 0}
+    - target: {fileID: 224650901578933986, guid: bf05546d0c9558641932d095c9074071,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 183
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf05546d0c9558641932d095c9074071, type: 2}
