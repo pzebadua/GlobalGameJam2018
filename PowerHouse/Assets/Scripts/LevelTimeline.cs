@@ -13,7 +13,7 @@ public class LevelTimeline : MonoBehaviour
     [SerializeField]
     public float CurrentSeconds; //current time in level
     [SerializeField]
-    float LevelLength; //duration of level
+   public float LevelLength; //duration of level
     [SerializeField]
     float CountdownTime; //time before level begins after it loads
     bool Countdown;
@@ -28,21 +28,18 @@ public class LevelTimeline : MonoBehaviour
         if (GameManagerScript.Difficulty == "Easy")
         {
             Level = 1;
-            LevelLength = 180;
+            
         }
 
         else if (GameManagerScript.Difficulty == "Medium")
         {
             Level = 2;
-            //TODO Add level length
-            LevelLength = 150;
+           
         }
 
         else if (GameManagerScript.Difficulty == "Hard")
         {
             Level = 3;
-            //TODO Add level length
-            LevelLength = 120;
         }
     }
 	
