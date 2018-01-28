@@ -14,24 +14,27 @@ public class LightingManager : MonoBehaviour {
         on = false;
 	}
 	
-    public void InvertLight()
+    public void TurnLightOn()
     {
-        on = !on;
+        on = true;
         if(on == true)
         {
+            FindObjectOfType<AudioManager>().Play("LightOn");
             thisLight.enabled = true;
         }
-        else if(on == false)
-        {
-            thisLight.enabled = false; 
-        }
+        
     }
-
+    public void TurnLightOff()
+    {
+        if (on == true)
+        {
+            FindObjectOfType<AudioManager>().Play("LightOff");
+        }
+        on = false;
+        thisLight.enabled = false;
+    }
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            InvertLight();
-        }
+        
 	}
 }
