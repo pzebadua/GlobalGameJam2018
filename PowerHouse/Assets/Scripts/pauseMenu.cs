@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class pauseMenu : MonoBehaviour {
-
+public class pauseMenu : MonoBehaviour
+{
+    void Start()
+    {
+        GameIsPaused = false;
+    }
     //This with tell us if the game is paused or not, we set it to not be on (false) as default.
     public static bool GameIsPaused = false;
 

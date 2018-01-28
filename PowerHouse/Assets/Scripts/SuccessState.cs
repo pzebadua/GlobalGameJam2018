@@ -12,9 +12,9 @@ public class SuccessState : MonoBehaviour {
     [SerializeField]
     int winscore;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         Winstate = false;
-        winscore = 0;
         LT.LevelLength = LevelTime;
     }
 	
