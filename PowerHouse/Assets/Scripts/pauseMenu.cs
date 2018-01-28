@@ -56,7 +56,7 @@ public class pauseMenu : MonoBehaviour {
         GameIsPaused = true;
     }
 
-    bool GetGameIsPaused()
+    public bool GetGameIsPaused()
     {
         return GameIsPaused;
     }
