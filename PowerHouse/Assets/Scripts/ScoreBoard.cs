@@ -37,7 +37,7 @@ public class ScoreBoard : MonoBehaviour
         if (EG.GetCharge() >= 51 && EG.GetCharge() <= 80)
         {
             GreenBarmultiplier = true;
-            playerscore += 2;
+            playerscore += 4;
             tempscore = (int)Time.deltaTime;
             if ((int)Time.deltaTime - tempscore == 2 && GreenBarmultiplier)
             {
@@ -65,7 +65,11 @@ public class ScoreBoard : MonoBehaviour
 
     void AverageSpot()
     {
-        if (EG.GetCharge() >= 0 || EG.GetCharge() <= 50)
+        if (EG.GetCharge() >= 25 || EG.GetCharge() <= 50)
+        {
+            playerscore+=2;
+        }
+        else if (EG.GetCharge() <= 24 && EG.GetCharge() >= 0)
         {
             playerscore++;
         }
