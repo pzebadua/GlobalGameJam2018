@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2c456832239bd304ea27e609401dc7fb
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 6250aea75271b7149be717228527997e
+    path: Assets/Scenes/Kevin Scene.unity
+    guid: fcb8c19e48b7c40418a26cef2669a6b7
