@@ -19,11 +19,9 @@ public class Electronics : MonoBehaviour {
     [SerializeField]
     float OnDuration;
     [SerializeField]
+    int LightCooldownTimer;
+    [SerializeField]
     ElectricityGauge electricityGauge;
-    //[SerializeField]
-    //Material OnMaterial;
-    //[SerializeField]
-    //Material OffMaterial;
     [SerializeField]
     LevelTimeline levelTimeline;
     bool HasBeenUsed = false;
@@ -31,25 +29,34 @@ public class Electronics : MonoBehaviour {
 
     void Update()
     {
+        if (electricityGauge.Charge <= 0)
+        {
+            Debug.Log("You lost. Power reached 0");
+            TurnedOn = false;
+        }
+        else if (electricityGauge.Charge >= 100)
+        {
+            Debug.Log("You lost. Power reached 100");
+            TurnedOn = false;
+        }
+
         if ((levelTimeline.CurrentSeconds >= TurnOnTime) && !HasBeenUsed)
         {
             TurnedOn = true;
             myLight.InvertLight();
         }
-        if (TurnedOn && (OnDuration <= Duration))
+        if (TurnedOn && (OnDuration <= Duration)) //Checks to see if the light is turned on and still has duration left
         {
-            //GetComponent<MeshRenderer>().material = OnMaterial;
             electricityGauge.Charge -= PowerUsage*Time.deltaTime;
+            Vector3 temp = transform.rotation.eulerAngles;
+            temp.z = electricityGauge.Charge * 1.8f;
+            transform.rotation = Quaternion.Euler(temp);
             OnDuration += 1 * Time.deltaTime;
             HasBeenUsed = true;
         }
-        if (OnDuration >= Duration)
+        if (OnDuration >= Duration) //Check to see if the light has been on for longer than it's allowed duration
         {
-            //GetComponent<MeshRenderer>().material = OffMaterial;
-            TurnedOn = false;
-            myLight.InvertLight();
-            OnDuration = 0;
-
+            StartCoroutine("WaitCoroutine");
         }
     }
     private void Start()
@@ -74,8 +81,11 @@ public class Electronics : MonoBehaviour {
         //animation to get more dim.
     }
 
-    void TriggerTimeline()
+    IEnumerator WaitCoroutine() //Cooldown for lights to reset and be able to be used again.
     {
-
+        TurnedOn = false;
+        OnDuration = 0;
+        yield return new WaitForSeconds(LightCooldownTimer);
+        HasBeenUsed = false;
     }
 }

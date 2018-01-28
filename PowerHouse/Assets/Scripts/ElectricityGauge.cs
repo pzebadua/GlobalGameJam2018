@@ -10,17 +10,22 @@ public class ElectricityGauge : MonoBehaviour {
     [SerializeField]
     public float Capacity;
     //current charge value
+    [Range(0, 100)]
     public float Charge;
     [SerializeField]
     ButtonManager ButtonScript;
+    [SerializeField]
+    GameObject Meter;
 
     void Start ()
     {
         //start the game at the "sweet spot" (75-80 charge)
         Charge = 50;
         Capacity = 100;
-        GetComponent<Slider>().value = Charge;
-	}
+        Vector3 temp = transform.rotation.eulerAngles;
+        temp.z = Charge * 1.8f;
+        transform.rotation = Quaternion.Euler(temp);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -42,15 +47,25 @@ public class ElectricityGauge : MonoBehaviour {
     //computes the charge to be added based on incoming input
     void ComputeCharge()
     {
-        Charge += ButtonScript.addPower;
-        ButtonScript.addPower = 0;
-        GetComponent<Slider>().value = Charge;
+        if ((Charge += ButtonScript.addPower) < 100) //TODO
+        {
+            Charge += ButtonScript.addPower;
+            ButtonScript.addPower = 0;
+            Vector3 temp = transform.rotation.eulerAngles;
+            temp.z = Charge * 1.8f;
+            transform.rotation = Quaternion.Euler(temp);
+        }
     }
 
     void DegenCharge()
     {
-        Charge += RegenRate*Time.deltaTime;
-        GetComponent<Slider>().value = Charge;
+        if ((Charge += RegenRate * Time.deltaTime) < 100)
+        {
+            Charge += RegenRate * Time.deltaTime;
+            Vector3 temp = transform.rotation.eulerAngles;
+            temp.z = Charge * 1.8f;
+            transform.rotation = Quaternion.Euler(temp);
+        }
     }
 
     //power limit hit at 100
