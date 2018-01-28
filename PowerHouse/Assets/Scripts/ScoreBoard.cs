@@ -11,6 +11,7 @@ public class ScoreBoard : MonoBehaviour
    
 
     public ElectricityGauge EG;
+    public pauseMenu PM;
    
     // Use this for initialization
     void Start()
@@ -34,7 +35,7 @@ public class ScoreBoard : MonoBehaviour
     
     void SweetSpot()
     {
-        if (EG.GetCharge() >= 51 && EG.GetCharge() <= 80)
+        if (EG.GetCharge() >= 51 && EG.GetCharge() <= 80 && PM.GetGameIsPaused() == false)
         {
             GreenBarmultiplier = true;
             playerscore += 4;
@@ -51,6 +52,8 @@ public class ScoreBoard : MonoBehaviour
             {
                 playerscore *= 10;
             }
+            
+           
         }
         else
         {
@@ -65,26 +68,29 @@ public class ScoreBoard : MonoBehaviour
 
     void AverageSpot()
     {
-        if (EG.GetCharge() >= 25 || EG.GetCharge() <= 50)
+        if (EG.GetCharge() >= 25 && EG.GetCharge() <= 50 && PM.GetGameIsPaused() == false)
         {
             playerscore+=2;
         }
-        else if (EG.GetCharge() <= 24 && EG.GetCharge() >= 0)
+        else if (EG.GetCharge() <= 24 && EG.GetCharge() >= 0 && PM.GetGameIsPaused() == false)
         {
             playerscore++;
         }
     }
     void BadSpot()
     {
-        if (EG.Charge >= 81)
+        if (EG.Charge >= 81 && PM.GetGameIsPaused() == false)
         {
             playerscore -= 1;
         }
-        if (playerscore <= 0)
+        if (playerscore <= 0 && PM.GetGameIsPaused() == false)
         {
             Mathf.Clamp(playerscore, 0, int.MaxValue);
         }
     }
+   
+    
+
     public int GetPlayerScore()
     {
         return playerscore;

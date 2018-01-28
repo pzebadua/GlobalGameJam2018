@@ -24,11 +24,18 @@ public class Electronics : MonoBehaviour {
     ElectricityGauge electricityGauge;
     [SerializeField]
     LevelTimeline levelTimeline;
+    [SerializeField]
+    int repeat;
     bool HasBeenUsed = false;
     LightingManager myLight;
 
     void Update()
     {
+        if(repeat == 0)
+        {
+            myLight.TurnLightOff();
+            TurnedOn = false;
+        }
         if (electricityGauge.Charge <= 0)
         {
             Debug.Log("You lost. Power reached 0");
@@ -42,9 +49,11 @@ public class Electronics : MonoBehaviour {
 
         if ((levelTimeline.CurrentSeconds >= TurnOnTime) && !HasBeenUsed)
         {
-            FindObjectOfType<AudioManager>().Play("LightOn");
-            TurnedOn = true;
-            myLight.InvertLight();
+            if (repeat > 0)
+            {
+                TurnedOn = true;
+                myLight.TurnLightOn();
+            }
         }
         if (TurnedOn && (OnDuration <= Duration)) //Checks to see if the light is turned on and still has duration left
         {
@@ -55,10 +64,12 @@ public class Electronics : MonoBehaviour {
             OnDuration += 1 * Time.deltaTime;
             HasBeenUsed = true;
         }
-        if (OnDuration >= Duration) //Check to see if the light has been on for longer than it's allowed duration
+        if (OnDuration >= Duration && repeat >0) //Check to see if the light has been on for longer than it's allowed duration
         {
+            repeat--;
             StartCoroutine("WaitCoroutine");
         }
+       
     }
     private void Start()
     {
@@ -84,7 +95,7 @@ public class Electronics : MonoBehaviour {
 
     IEnumerator WaitCoroutine() //Cooldown for lights to reset and be able to be used again.
     {
-        
+        myLight.TurnLightOff();
         TurnedOn = false;
         OnDuration = 0;
         yield return new WaitForSeconds(LightCooldownTimer);
