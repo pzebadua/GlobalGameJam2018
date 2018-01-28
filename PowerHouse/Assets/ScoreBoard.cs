@@ -11,18 +11,15 @@ public class ScoreBoard : MonoBehaviour
     float timeinsweetspot;
     bool GreenBarmultiplier;
     int playerscore;
+    int tempscore;
    
 
     ElectricityGauge EG;
-    ButtonManager BM;
-    [SerializeField]
-    Text text;
+   
     // Use this for initialization
     void Start()
     {
         EG = GetComponent<ElectricityGauge>();
-        BM = GetComponent<ButtonManager>();
-        text = GameObject.FindGameObjectWithTag("ButtonTag").GetComponent<Text>();
         YellowBar = 0;
         GreenBar = 0;
         playerscore = 0;
@@ -32,26 +29,36 @@ public class ScoreBoard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        displayescore();
+        updatescore();
     }
     void updatescore()
     {
         SweetSpot();
         AverageSpot();
+        BadSpot();
             
     }
-    void displayescore()
-    {
-        updatescore();
-        text.text = playerscore.ToString();
-    }
+    
     void SweetSpot()
     {
         //if (EG.Charge >= 51 || EG.Charge <= 80)
         if (EG.Charge >= 51 && EG.Charge <= 80)
         {
             GreenBarmultiplier = true;
-            playerscore = playerscore + 2 * (int)Time.deltaTime;
+            playerscore += 2;
+            tempscore = (int)Time.deltaTime;
+            if ((int)Time.deltaTime - tempscore == 2 && GreenBarmultiplier)
+            {
+                playerscore *= 2;
+            }
+            else if ((int)Time.deltaTime - tempscore == 5 && GreenBarmultiplier)
+            {
+                playerscore *= 5;
+            }
+            else if ((int)Time.deltaTime - tempscore == 10 && GreenBarmultiplier)
+            {
+                playerscore *= 10;
+            }
         }
         else
         {
@@ -69,6 +76,13 @@ public class ScoreBoard : MonoBehaviour
         if (EG.Charge >= 0 || EG.Charge <= 50)
         {
             playerscore++;
+        }
+    }
+    void BadSpot()
+    {
+        if (EG.Charge >= 81)
+        {
+            playerscore -= 2;
         }
     }
 }
