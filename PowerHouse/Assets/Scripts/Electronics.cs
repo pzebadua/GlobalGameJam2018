@@ -42,6 +42,7 @@ public class Electronics : MonoBehaviour {
 
         if ((levelTimeline.CurrentSeconds >= TurnOnTime) && !HasBeenUsed)
         {
+            FindObjectOfType<AudioManager>().Play("LightOn");
             TurnedOn = true;
             myLight.InvertLight();
         }
@@ -83,6 +84,7 @@ public class Electronics : MonoBehaviour {
 
     IEnumerator WaitCoroutine() //Cooldown for lights to reset and be able to be used again.
     {
+        
         TurnedOn = false;
         OnDuration = 0;
         yield return new WaitForSeconds(LightCooldownTimer);
