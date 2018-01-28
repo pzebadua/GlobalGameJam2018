@@ -79,4 +79,9 @@ public class ElectricityGauge : MonoBehaviour {
     {
         Debug.Log("Yo we dont have power");
     }
+    public int GetCharge()
+    {
+
+        return (int)Charge;
+    }
 }

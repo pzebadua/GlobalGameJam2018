@@ -5,23 +5,16 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
-
-    float YellowBar;
-    float GreenBar;
-    float timeinsweetspot;
     bool GreenBarmultiplier;
-    int playerscore;
+   public int playerscore;
     int tempscore;
    
 
-    ElectricityGauge EG;
+    public ElectricityGauge EG;
    
     // Use this for initialization
     void Start()
     {
-        EG = GetComponent<ElectricityGauge>();
-        YellowBar = 0;
-        GreenBar = 0;
         playerscore = 0;
 
     }
@@ -41,8 +34,7 @@ public class ScoreBoard : MonoBehaviour
     
     void SweetSpot()
     {
-        //if (EG.Charge >= 51 || EG.Charge <= 80)
-        if (EG.Charge >= 51 && EG.Charge <= 80)
+        if (EG.GetCharge() >= 51 && EG.GetCharge() <= 80)
         {
             GreenBarmultiplier = true;
             playerscore += 2;
@@ -73,7 +65,7 @@ public class ScoreBoard : MonoBehaviour
 
     void AverageSpot()
     {
-        if (EG.Charge >= 0 || EG.Charge <= 50)
+        if (EG.GetCharge() >= 0 || EG.GetCharge() <= 50)
         {
             playerscore++;
         }
@@ -82,7 +74,15 @@ public class ScoreBoard : MonoBehaviour
     {
         if (EG.Charge >= 81)
         {
-            playerscore -= 2;
+            playerscore -= 1;
         }
+        if (playerscore <= 0)
+        {
+            Mathf.Clamp(playerscore, 0, int.MaxValue);
+        }
+    }
+    public int GetPlayerScore()
+    {
+        return playerscore;
     }
 }
