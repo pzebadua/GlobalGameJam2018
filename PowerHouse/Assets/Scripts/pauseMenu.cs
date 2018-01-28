@@ -49,4 +49,10 @@ public class pauseMenu : MonoBehaviour {
         Debug.Log("we have quit the game");
         Application.Quit();
     }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
 }
