@@ -9,8 +9,9 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayGame() //Function to Run the first level
     {
-        StartCoroutine(WaitForNextScene());
+        //StartCoroutine(WaitForNextScene());
         //SceneManager.LoadScene("Credits");//Load first level.
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()//Function to quit the game.
@@ -19,10 +20,10 @@ public class MainMenu : MonoBehaviour {
         Application.Quit();//Exit the application.
     }
 
-    IEnumerator WaitForNextScene()
-    {
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(1);
+    //IEnumerator WaitForNextScene()
+    //{
+    //    yield return new WaitForSeconds(1.5f);
+    //    SceneManager.LoadScene(1);
 
-    }
+    //}
 }
