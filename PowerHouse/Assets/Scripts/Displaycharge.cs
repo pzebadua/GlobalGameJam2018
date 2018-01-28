@@ -22,7 +22,7 @@ public class Displaycharge : MonoBehaviour
 
     void ShowCharge()
     {
-        text.text = EG.GetCharge().ToString();
+        text.text = "Charge: " + EG.GetCharge().ToString();
     }
     // Update is called once per frame
     void Update()
